@@ -10,8 +10,8 @@ import com.spring.security.service.JwtService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-@RequestMapping("/auth")
 @RestController
+@RequestMapping("/auth")
 public class AuthController {
     private final JwtService jwtService;
     private final AuthService authService;
