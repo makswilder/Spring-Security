@@ -39,8 +39,9 @@ public class User implements UserDetails {
     @Column(name = "verification_code")
     private String verificationCode;
 
+    @Getter
     @Column(name = "verification_expiration")
-    private LocalDateTime verificationExpiration;
+    private LocalDateTime VerificationCodeExpiresAt;
 
     public User(String username, String email, String password) {
         this.username = username;
@@ -75,4 +76,8 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return enabled;
     }
+
+    public void setUsername(String username, String email, String encode) {
+    }
+
 }
